@@ -7,19 +7,23 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 Dose.destroy_all
-Cocktail.destroy_all
+
 Ingredient.destroy_all
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "fraise")
-Ingredient.create(name: "cerise")
-Ingredient.create(name: "framboise")
+mint = Ingredient.create(name: "Mint")
+ice = Ingredient.create(name: "Ice")
+sugar = Ingredient.create(name: "Sugar")
+rhum = Ingredient.create(name: "Rhum")
+soda_water = Ingredient.create(name: "Soda water")
+lime = Ingredient.create(name: "Lime")
 
-Cocktail.create(name: "picon bierre")
-Cocktail.create(name: "demi framboise")
-Cocktail.create(name: "mojito framboise")
-Cocktail.create(name: "mojito jus de sylvain")
-Cocktail.create(name: "smoothie banane")
-Cocktail.create(name: "smoothie fraise framboise")
+Cocktail.destroy_all
+
+mojito = Cocktail.create(name: "Mojito")
+
+Dose.create(cocktail: mojito, ingredient: mint, description: "3 leaves")
+Dose.create(cocktail: mojito, ingredient: ice, description: "A spoon crushed")
+Dose.create(cocktail: mojito, ingredient: sugar, description: "just a hint")
+Dose.create(cocktail: mojito, ingredient: rhum, description: "10cl")
+Dose.create(cocktail: mojito, ingredient: lime, description: "3 slices")
+Dose.create(cocktail: mojito, ingredient: soda_water, description: "To the rim")

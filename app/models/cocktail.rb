@@ -1,6 +1,5 @@
 class Cocktail < ActiveRecord::Base
-  has_many :ingredients
-  has_many :doses, dependent: :destroy
-  validates :name, presence: true
-  validates :name, uniqueness: true
+  has_many :doses
+  has_many :ingredients, through: :doses
+  validates :name, presence: true, uniqueness: true
 end
