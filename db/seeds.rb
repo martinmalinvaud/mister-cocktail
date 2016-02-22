@@ -20,6 +20,8 @@ lime = Ingredient.create(name: "Lime")
 Cocktail.destroy_all
 
 mojito = Cocktail.create(name: "Mojito")
+sex_on_the_beach = Cocktail.create(name: "sex on the beach")
+picon_biere = Cocktail.create(name: "picon biere")
 
 Dose.create(cocktail: mojito, ingredient: mint, description: "3 leaves")
 Dose.create(cocktail: mojito, ingredient: ice, description: "A spoon crushed")
